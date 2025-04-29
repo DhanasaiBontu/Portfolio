@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Dhanasai Bontu</title>
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" class="logo-img">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-section">
+    <div class="contact-content">
+      <h1>Get <span>In Touch</span></h1>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/dhanasaibontu/" target="_blank">
+          <img src="images/contacts/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/DhanasaiBontu" target="_blank">
+          <img src="images/contacts/github.png" alt="GitHub">
+        </a>
+        <a href="tel:+919391605628">
+          <img src="images/contacts/phone.png" alt="Phone">
+        </a>
+        <a href="mailto:bdhanasaichowdary@gmail.com">
+          <img src="images/contacts/mail.png" alt="Gmail">
+        </a>
+        <a href="https://www.instagram.com/dhana_2215/" target="_blank">
+          <img src="images/contacts/instagram.png" alt="Instagram">
+        </a>
+      </div>
+
+      <form class="contact-form" action="https://formsubmit.co/bdhanasaichowdary@gmail.com" method="POST">
+        <!-- Formsubmit hidden input -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="thankyou.html"> <!-- Optional redirect after submit -->
+
+        <div class="form-row">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+        </div>
+
+        <input type="text" name="Subject" placeholder="Subject" required>
+
+        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Bontu Dhanasai Chowdary | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

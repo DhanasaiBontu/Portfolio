@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Achievements</title>
+  <link rel="stylesheet" href="css/achievements.css">
+</head>
+<body>
+
+  <!-- Navbar (same as other pages) -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" class="logo-img">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a class="active" href="achievements.html">Achievements</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Achievements Carousel -->
+  <section class="achievements-section">
+    <h1>My <span>Achievements</span></h1>
+
+    <div class="carousel-container">
+      <div class="carousel-track">
+
+        <!-- Achievement 1 -->
+        <div class="achievement-card">
+            <img src="images/ieee.png" alt="Achievement 1">
+            <h2>Paper Published - IEEE DELCON 2024</h2>
+            <p>Published "Stack-Based Ensembles for Robust Neural Image Captioning" in IEEE Xplore.</p>
+            <p class="extra-info">Recognized contribution in advancing sustainable AI technology.</p>
+            <a href="https://ieeexplore.ieee.org/document/10866694" target="_blank" class="btn">View Paper</a>
+        </div>
+          
+
+        <!-- Achievement 2 -->
+        <div class="achievement-card">
+          <img src="images/gen_AI_logo.png" alt="Google Hackathon">
+          <h2>Top 5 - Google Gen AI Hackathon</h2>
+          <p>City AI Engine project solving urban challenges using AI integration.</p>
+          <a href="images/gen_AI_certi.png" class="btn" target="_blank">View Certificate</a>
+        </div>
+
+        <!-- Achievement 3 -->
+        <div class="achievement-card">
+          <img src="images/RD_logo.png" alt="R&D Showcase">
+          <h2>Second Prize - R&D Showcase</h2>
+          <p>Recognized for "Neural Image Captioning Using Visual Attention" project.</p>
+          <a href="images/R&D.png" class="btn" target="_blank">View Prize</a>
+        </div>
+
+        <!-- Achievement 4 -->
+        <div class="achievement-card">
+          <img src="images/tcs.png" alt="TCS Codevita">
+          <h2>56th Rank - TCS CodeVita</h2>
+          <p>Achieved global top 56th rank among competitive programmers.</p>
+          <a href="images/tcs_certi.png" class="btn" target="_blank">View Certificate</a>
+        </div>
+
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Bontu Dhanasai Chowdary | All Rights Reserved
+  </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+    let currentSlide = 0;
+
+    function updateSlide(position) {
+      track.style.transform = `translateX(-${position * 100}%)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide(currentSlide);
+    });
+
+    prevButton.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlide(currentSlide);
+    });
+  </script>
+
+</body>
+</html>
